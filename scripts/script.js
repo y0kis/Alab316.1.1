@@ -1,7 +1,14 @@
-//1.0-1.3
+// Menu data structure
+var menuLinks = [
+    { text: 'about', href: '/about' },
+    { text: 'catalog', href: '/catalog' },
+    { text: 'orders', href: '/orders' },
+    { text: 'account', href: '/account' },
+  ];
+
 //step 1
 const mainEl = document.querySelector('main');
-console.log(mainEl);
+//console.log(mainEl);
 //step 2
 mainEl.style.backgroundColor = 'var(--main-bg)'
 //let backGroundColor = 'var(--main-bg)'
@@ -9,24 +16,18 @@ mainEl.style.backgroundColor = 'var(--main-bg)'
 mainEl.innerHTML = '<h1>DOM Manipulation</h1>'
 //step 4 
 mainEl.classList = 'flex-ctr';
-// Menu data structure
-var menuLinks = [
-    { text: 'about', href: '/about' },
-    { text: 'catalog', href: '/catalog' },
-    { text: 'orders', href: '/orders' },
-    { text: 'account', href: '/account' },
-];
 
 // Creating a menu bar 
 //step 1
-const topmenuEl = document.getElementById('top-menu')
-console.log(topmenuEl);
+const topmenuEl = document.getElementById('top-menu');
+//console.log(topmenuEl);
 // step 2
 topmenuEl.style.height = ('100%')
 // step 3
 topmenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 //step 4 
 topmenuEl.classList = 'flex-around';
+
 //Adding Menu Buttons
 //step 1 
 menuLinks.forEach(function(link) {
@@ -39,3 +40,22 @@ menuLinks.forEach(function(link) {
     //step 5 
     topmenuEl.appendChild(linkEl)
 })
+
+// Part 2 
+
+// Creating the Submenu 
+//step 1 
+const subMenuEl = document.getElementById ('sub-menu');
+console.log(subMenuEl);
+//step 2
+subMenuEl.style.height = ('100%')
+//step 3 
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+//step 4
+subMenuEl.classList = 'flex-around'
+
+//submenu 
+//step 1 
+subMenuEl.style.position = 'absolute'
+//step 2 
+subMenuEl.style.top = '0'
