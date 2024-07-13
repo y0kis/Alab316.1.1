@@ -1,4 +1,4 @@
- * {
+* {
 	box-sizing: border-box;
 }
 
@@ -11,7 +11,7 @@
 
 body {
 	font-family: Tahoma, Geneva, sans-serif;
-	height:100vh;
+	height: 100vh;
 	margin: 0;
 	display: grid;
 	grid-template-rows: 3rem auto;
@@ -39,7 +39,7 @@ nav a {
 }
 
 #top-menu a:hover {
-	background-color: var(--sub-menu-bg); 
+	background-color: var(--sub-menu-bg);
 }
 
 header, #top-menu {
@@ -50,7 +50,7 @@ header, #top-menu {
 }
 #sub-menu {
 	width: 100%;
-	z-index: 20;
+	z-index: 10;
 	transition: top 0.5s ease-out;
 }
 #sub-menu a:hover {
@@ -59,17 +59,4 @@ header, #top-menu {
 nav a.active {
 	background-color: var(--sub-menu-bg);
 	color: var(--main-bg);
-}
-
-
-.flex-ctr {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.flex-around {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 }
